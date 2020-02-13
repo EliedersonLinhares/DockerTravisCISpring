@@ -15,8 +15,8 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker tag cursospring:latest $DOCKER_USERNAME/cursospring:$TRAVIS_JOB_ID;
-    docker push $DOCKER_USERNAME/cursospring;
+    docker tag cursospring:latest keasarge/cursospring:$TRAVIS_JOB_ID;
+    docker push keasarge/cursospring;
   on:
     branch: master
 notifications:
